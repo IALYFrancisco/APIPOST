@@ -1,5 +1,5 @@
 <script lang="ts">
-import AccueilView from './views/AccueilView.vue';
+import AccueilView from './views/AccueilView.vue'
 
 export default {
   name: "app",
