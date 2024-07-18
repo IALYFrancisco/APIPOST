@@ -1,13 +1,16 @@
 <template>
-    <NavBarComponent/>
+    <HeaderComponent/>
+    <!-- <RouterView/> -->
 </template>
 <script lang="ts">
-import NavBarComponent from '@/components/for_all/NavBarComponent.vue';
+import HeaderComponent from '@/components/for_all/HeaderComponent.vue';
+// import RouterView from 'vue-router';
 
 export default {
     name: "AccueilView",
     components: {
-        NavBarComponent
+        HeaderComponent,
+        // RouterView
     }
 }
 </script>

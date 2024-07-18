@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <nav>
         <span id="logo">
             <img src="../../assets/images/logo_apipost.png" alt="logo de APIPOST" title="logo de APIPOST">
             <p>APIPOST</p>
@@ -7,8 +7,10 @@
         <ul>
             <li>Guides</li>
             <li>Ressources</li>
+            <li>A propos</li>
+            <li>Github</li>
         </ul>
-    </div>
+    </nav>
 </template>
 
 <script lang="ts">
@@ -23,32 +25,35 @@ export default {
 </script>
 <style scoped>
 
-div {
+header nav {
+    position: relative;
     width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px 0 20px;
+    color: white;
+    z-index: 1;
 }
 
-div span#logo {
+header nav span#logo {
     display: flex;
     align-items: center;
 }
 
-div span#logo p {
+header nav span#logo p {
     margin-left: 8px;
 }
 
-div span#logo img{
+header nav span#logo img{
     width: 45px;
 }
 
-div ul {
+header nav ul {
     display: flex;
     justify-content: space-around;
-    width: 200px;
+    width: 30%;
 }
 
 </style>
