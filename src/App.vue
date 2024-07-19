@@ -1,18 +1,16 @@
 <script lang="ts">
-import AccueilView from './views/AccueilView.vue';
+import AccueilView from './views/AccueilView.vue'
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    AccueilView,
+    AccueilView
   }
 }
-
 </script>
 
 <template>
-  <AccueilView/>
+  <AccueilView />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
