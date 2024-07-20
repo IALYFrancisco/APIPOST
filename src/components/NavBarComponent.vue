@@ -18,7 +18,7 @@
                 <RouterLink to="/apropos">A propos</RouterLink>
             </li>
             <li>
-                <RouterLink to="/github" target="_blank" title="Lien github de APIPOST">Github</RouterLink>
+                <a href="https://github.com" target="_blank" title="Lien github de APIPOST">Github</a>
             </li>
         </ul>
     </nav>
@@ -32,6 +32,9 @@ export default {
     name: "NavbarComponent",
     data: function() {
         return {}
+    },
+    components: {
+        RouterLink
     }
 }
 
