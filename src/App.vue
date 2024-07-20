@@ -1,16 +1,19 @@
 <script lang="ts">
-import AccueilView from './views/AccueilView.vue'
+import NavBarComponent from './components/NavBarComponent.vue';
+import { RouterView } from 'vue-router';
 
 export default {
   name: 'app',
   components: {
-    AccueilView
+    NavBarComponent,
+    RouterView
   }
 }
 </script>
 
 <template>
-  <AccueilView />
+  <NavBarComponent />
+  <RouterView />
 </template>
 
 <style scoped></style>

@@ -1,0 +1,87 @@
+<template>
+    <nav>
+        <span id="logo">
+            <img src="../assets/images/logo_apipost.png" alt="logo de APIPOST" title="logo de APIPOST">
+            <p>APIPOST</p>
+        </span>
+        <ul>
+            <li>
+                <RouterLink to="/">Accueil</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/guides">Guides</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/ressources">Ressources</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/apropos">A propos</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/github" target="_blank" title="Lien github de APIPOST">Github</RouterLink>
+            </li>
+        </ul>
+    </nav>
+</template>
+
+<script lang="ts">
+import { RouterLink } from 'vue-router';
+
+
+export default {
+    name: "NavbarComponent",
+    data: function() {
+        return {}
+    }
+}
+
+</script>
+<style scoped>
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    background-image: url('../assets/images/background_image (3).jpg');
+    background-size: cover;
+    background-position: 30px 0 0 0;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+nav::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #5d2417ed;
+    margin-left: -20px;
+    z-index: -1;
+}
+
+nav span#logo {
+    display: flex;
+    align-items: center;
+}
+
+nav span#logo p {
+    margin-left: 8px;
+}
+
+nav span#logo img{
+    width: 45px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+</style>
