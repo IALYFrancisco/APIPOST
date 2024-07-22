@@ -1,6 +1,5 @@
 <template>
     <header>
-        <NavBarComponent/>
         <div class="banniere">
             <div class="left">
                 <span class="title">APIPOST</span>
@@ -12,12 +11,9 @@
 </template>
 
 <script lang="ts">
-import NavBarComponent from './NavBarComponent.vue';
-
     export default {
         name: "HeaderComponent",
         components: {
-            NavBarComponent
         }
     }
 
@@ -27,8 +23,8 @@ import NavBarComponent from './NavBarComponent.vue';
 
 header {
     width: 100%;
-    height: 50vh;
-    background-image: url('../../assets/images/background_image (3).jpg');
+    height: 40vh;
+    background-image: url('../assets/images/background_image (3).jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

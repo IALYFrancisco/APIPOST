@@ -1,21 +1,32 @@
+import AccueilView from '@/views/AccueilView.vue';
+import AproposView from '@/views/AproposView.vue';
+import GuidesView from '@/views/GuidesView.vue';
+import RessourcesView from '@/views/RessourcesView.vue';
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'home',
-    //   component: HomeView
-    // },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
+    {
+      path: '/',
+      name: 'accueil',
+      component: AccueilView
+    },
+    {
+      path: '/guides',
+      name: 'guides',
+      component: GuidesView
+    },
+    {
+      path: '/ressources',
+      name: 'ressources',
+      component: RessourcesView
+    },
+    {
+      path: '/apropos',
+      name: 'apropos',
+      component: AproposView
+    }
   ]
 })
 
