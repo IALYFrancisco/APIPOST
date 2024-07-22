@@ -1,7 +1,11 @@
-import AccueilView from '@/views/AccueilView.vue';
-import AproposView from '@/views/AproposView.vue';
-import GuidesView from '@/views/GuidesView.vue';
-import RessourcesView from '@/views/RessourcesView.vue';
+import AvecquoiestelledeveloppeeComponent from '@/components/AvecquoiestelledeveloppeeComponent.vue'
+import EtapededeveloppementComponent from '@/components/EtapededeveloppementComponent.vue'
+import GithubComponent from '@/components/GithubComponent.vue'
+import QuiladeveloppeeComponent from '@/components/QuiladeveloppeeComponent.vue'
+import AccueilView from '@/views/AccueilView.vue'
+import AproposView from '@/views/AproposView.vue'
+import GuidesView from '@/views/GuidesView.vue'
+import RessourcesView from '@/views/RessourcesView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -25,7 +29,21 @@ const router = createRouter({
     {
       path: '/apropos',
       name: 'apropos',
-      component: AproposView
+      component: AproposView,
+      children: [
+        { path: '', name: 'quiladeveloppee', component: QuiladeveloppeeComponent },
+        {
+          path: 'avec quoiestelledeveloppee',
+          name: 'avecquoiestelledevelopee',
+          component: AvecquoiestelledeveloppeeComponent
+        },
+        {
+          path: 'etapesdedeveloppement',
+          name: 'etapesdedeveloppement',
+          component: EtapededeveloppementComponent
+        },
+        { path: 'github', name: 'github', component: GithubComponent }
+      ]
     }
   ]
 })
