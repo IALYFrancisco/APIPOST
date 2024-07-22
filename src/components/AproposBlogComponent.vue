@@ -39,7 +39,7 @@
 div.aproposblog {
   border-right: 0.1px solid #33333334;
   width: 225px;
-  height: 50vh;
+  height: 70vh;
   margin-left: -200px;
   margin-top: 50px;
   margin-right: 70px;
