@@ -1,3 +1,5 @@
+import JSComponent from '@/components/JSComponent.vue'
+import PythonComponent from '@/components/PythonComponent.vue'
 import AvecquoiestelledeveloppeeComponent from '@/components/AvecquoiestelledeveloppeeComponent.vue'
 import EtapededeveloppementComponent from '@/components/EtapededeveloppementComponent.vue'
 import GithubComponent from '@/components/GithubComponent.vue'
@@ -14,7 +16,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'accueil',
-      component: AccueilView
+      component: AccueilView,
+      children: [
+        { path: '', name: 'jscomponent', component: JSComponent },
+        { path: 'python', name: 'python', component: PythonComponent }
+      ]
     },
     {
       path: '/guides',

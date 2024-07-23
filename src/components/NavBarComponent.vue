@@ -1,4 +1,3 @@
-<template>
   <nav>
     <span id="logo">
       <img src="../assets/images/logo_apipost.png" alt="logo de APIPOST" title="logo de APIPOST" />
@@ -87,7 +86,25 @@ nav ul {
   align-items: center;
 }
 
-nav ul li a img {
-  width: 35px;
+nav > img {
+    width: 25px;
+    cursor: pointer;
+    display: none;
 }
+
+@media only screen and (max-width: 1140px) {
+
+    nav img {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+    
+}
+
+/*nav ul li a img {
+  width: 35px;
+}*/
 </style>
