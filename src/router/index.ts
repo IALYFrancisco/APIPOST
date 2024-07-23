@@ -1,7 +1,9 @@
-import AccueilView from '@/views/AccueilView.vue';
-import AproposView from '@/views/AproposView.vue';
-import GuidesView from '@/views/GuidesView.vue';
-import RessourcesView from '@/views/RessourcesView.vue';
+import JSComponent from '@/components/JSComponent.vue'
+import PythonComponent from '@/components/PythonComponent.vue'
+import AccueilView from '@/views/AccueilView.vue'
+import AproposView from '@/views/AproposView.vue'
+import GuidesView from '@/views/GuidesView.vue'
+import RessourcesView from '@/views/RessourcesView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -10,7 +12,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'accueil',
-      component: AccueilView
+      component: AccueilView,
+      children: [
+        { path: '', name: 'jscomponent', component: JSComponent },
+        { path: 'python', name: 'python', component: PythonComponent }
+      ]
     },
     {
       path: '/guides',

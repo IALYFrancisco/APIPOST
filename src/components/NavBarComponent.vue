@@ -54,7 +54,6 @@ nav {
     background-size: cover;
     background-position: 30px 0 0 0;
     background-repeat: no-repeat;
-    position: relative;
     z-index: 1;
     color: white;
 }
