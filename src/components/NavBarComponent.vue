@@ -1,4 +1,5 @@
-  <nav>
+  <template>
+    <nav>
     <span id="logo">
       <img src="../assets/images/logo_apipost.png" alt="logo de APIPOST" title="logo de APIPOST" />
       <p>APIPOST</p>
@@ -104,7 +105,7 @@ nav > img {
     
 }
 
-/*nav ul li a img {
+nav ul li a img {
   width: 35px;
-}*/
+}
 </style>
