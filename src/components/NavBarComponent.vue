@@ -21,6 +21,7 @@
                 <a href="https://github.com" target="_blank" title="Lien github de APIPOST">Github</a>
             </li>
         </ul>
+        <img src="../assets/images/menu.png" alt="">
     </nav>
 </template>
 
@@ -85,6 +86,24 @@ nav ul {
     display: flex;
     justify-content: space-around;
     width: 30%;
+}
+
+nav > img {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 1140px) {
+
+    nav img {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+    
 }
 
 </style>
