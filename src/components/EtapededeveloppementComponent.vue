@@ -2,29 +2,17 @@
   <ul>
     <li>
       <span class="title">
-        <p class="numero">1.</p>
-        <p class="question">Qui l'a développée?</p>
+        <p class="numero">3.</p>
+        <p class="question">Etapes de développement:</p>
       </span>
       <p class="text">
-        <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est une plateforme open
-        source développée par
-        <span class="keyword" title="Qui est-ce 🤔?"
-          ><a href="https://portfolio-4n0j.onrender.com" target="_blank"
-            >IALY Francisco Raymond</a
-          ></span
-        >, jeune homme étudiant en informatique dans le domaine du génie logiciel, suite à sa
-        passion et son avide de connaissance dans le monde de développement web. Elle a été créée
-        dans le cadre de simplifier l'apprentissage de langage de programmation côté serveur.
-        <br />
-        Lien de son portfolio:
-        <span class="keyword"
-          ><a
-            href="https://portfolio-4n0j.onrender.com/"
-            target="_blank"
-            title="Portfolio de IALY 🔗"
-            >https://portfolio-4n0j.onrender.com</a
-          ></span
-        >
+        Le serveur de <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> était
+        développée en premier. Puis ses APIs ont été testés avec
+        <span class="keyword"><a href="https://postman.com" target="_blank">postman</a></span
+        >. Ensuite la création de son l'interface utilisateur. Les outils
+        <span class="keyword"><a href="https://git.com" target="_blank">git</a></span> et
+        <span class="keyword"><a href="https://github.com" target="_blank">github</a></span> ont été utilisés pour
+        la versionning de codes.
       </p>
     </li>
   </ul>
