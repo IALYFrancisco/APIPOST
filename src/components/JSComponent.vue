@@ -3,7 +3,7 @@
      <span style="color:rgb(0, 255, 255);">axios</span>.<span style="color: yellow;">get</span>('https://apipostserver.onrender.com/product/9')
         .<span style="color: yellow;">then</span>(<span style="color:rgb(0, 255, 255);;">response</span> => <span style="color:rgb(0, 255, 255);">console</span>.<span style="color: yellow;">log</span>(<span style="color:rgb(0, 255, 255);">response</span>))
   </pre>
-  <button>lancer ce script</button>
+  <button @click="launchScript()">lancer ce script</button>
 </template>
 
 <style scoped>
@@ -38,6 +38,16 @@ button:active {
 
 <script lang="ts">
 export default {
-  name: 'JSComponent'
+  name: 'JSComponent',
+  data: function() {
+    return {
+      scriptsLaunched : false
+    }
+  },
+  methods : {
+    launchScript(){
+      this.scriptsLaunched = true
+    }
+  }
 }
 </script>
