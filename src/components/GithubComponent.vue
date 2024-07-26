@@ -12,8 +12,12 @@
         <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est ouvert à toutes
         propositions de la part de qui que ce soit. Vous pouvez directement faire proposition de
         votre perception en créeant votre branche sur
-        <span class="keyword"><a href="https://github.com" target="_blank">github</a></span> avec le
-        dêpot github de APIPOST.
+        <span class="keyword"
+          ><a href="https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS" target="_blank"
+            >github</a
+          ></span
+        >
+        avec le dêpot github de APIPOST.
         <br />
         Lien github de APIPOST:
         <span class="keyword"
