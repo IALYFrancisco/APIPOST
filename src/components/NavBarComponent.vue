@@ -18,11 +18,15 @@
         <RouterLink to="/apropos">A propos</RouterLink>
       </li>
       <li>
-        <a href="https://github.com" target="_blank" title="Lien github de APIPOST">
-          <img src="../assets/images/github.png" alt="" />
-        </a>
+        <a
+          href="https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS.git"
+          target="_blank"
+          title="Lien github de APIPOST"
+          ><img src="../assets/images/github.png" alt=""
+        /></a>
       </li>
     </ul>
+    <img src="../assets/images/menu.png" alt="" />
   </nav>
 </template>
 
@@ -52,7 +56,6 @@ nav {
   background-size: cover;
   background-position: 30px 0 0 0;
   background-repeat: no-repeat;
-  position: relative;
   z-index: 1;
   color: white;
 }
@@ -88,21 +91,23 @@ nav ul {
 }
 
 nav > img {
-    width: 25px;
-    cursor: pointer;
-    display: none;
+  width: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul li a img {
+  width: 35px;
 }
 
 @media only screen and (max-width: 1140px) {
+  nav img {
+    display: block;
+  }
 
-    nav img {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-    }
-    
+  nav ul {
+    display: none;
+  }
 }
 
 nav ul li a img {

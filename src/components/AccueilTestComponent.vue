@@ -82,7 +82,7 @@ div.container div.scripts {
 
 div.container div.langages span {
   width: max-content;
-  padding: 0 6px 0 15px;
+  padding: 0 10px 0 15px;
   height: inherit;
   display: flex;
   align-items: center;
@@ -91,7 +91,7 @@ div.container div.langages span {
 }
 
 div.container div.langages span img {
-    width: 25px;
+    width: 20px;
     cursor: pointer;
 }
 
