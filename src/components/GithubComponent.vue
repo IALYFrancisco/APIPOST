@@ -12,16 +12,21 @@
         <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est ouvert à toutes
         propositions de la part de qui que ce soit. Vous pouvez directement faire proposition de
         votre perception en créeant votre branche sur
-        <span class="keyword"><a href="https://github.com" target="_blank">github</a></span> avec le
-        dêpot github de APIPOST.
+        <span class="keyword"
+          ><a href="https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS" target="_blank"
+            >github</a
+          ></span
+        >
+        avec le dêpot github de APIPOST.
         <br />
         Lien github de APIPOST:
         <span class="keyword"
           ><a
+            id="remote"
             href="https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS.git"
             target="_blank"
             title="dépôt github de APIPOST 🔗"
-            >htts://github.com</a
+            >https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS</a
           ></span
         >
       </p>
@@ -37,9 +42,13 @@ export default {
 
 <style scoped>
 ul {
-  width: inherit;
+  width: 100%;
   height: inherit;
   padding: 80px 30px 30px 30px;
+}
+
+ul li {
+  width: 100%;
 }
 
 ul li span.title {
@@ -88,5 +97,17 @@ ul li p.text span.keyword {
 
 ul li p.text span.keyword a {
   color: royalblue;
+}
+
+@media only screen and (max-width: 1350px) {
+  ul {
+    padding: 80px 8px 30px 8px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  a#remote {
+    font-size: 75%;
+  }
 }
 </style>

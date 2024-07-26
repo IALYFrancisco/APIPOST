@@ -40,9 +40,13 @@ export default {
 
 <style scoped>
 ul {
-  width: inherit;
+  width: 100%;
   height: inherit;
   padding: 80px 30px 30px 30px;
+}
+
+ul li {
+  width: 100%;
 }
 
 ul li span.title {
@@ -79,10 +83,6 @@ ul li p.text {
   font-size: 16px;
 }
 
-ul li p.text p.subtext {
-    margin-left: 50px;
-}
-
 ul li p.text span.keyword:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -97,40 +97,11 @@ ul li p.text span.keyword a {
   color: royalblue;
 }
 
-ul li p.text span.subtitle {
-    margin-top: 20px;
-    display: block;
-    margin-left: 20px;
+@media only screen and (max-width: 1350px) {
+
+ul {
+  padding: 80px 8px 30px 8px;
 }
 
-ul li p.text span.subtitle p {
-    display: inline;
 }
-
-ul li p.text span.subtitle p:nth-child(2) {
-    margin-left: 5px;
-}
-
-ul li p.text span.subtitle p.numero {
-  display: inline;
-  color: #5d2417;
-}
-
-ul li p.text span.subtitle p.question {
-  display: inline;
-  margin-left: 10px;
-  position: relative;
-  padding-bottom: 5px;
-}
-
-ul li p.text span.subtitle p.question::before {
-  position: absolute;
-  content: '';
-  background-color: #5d2417;
-  width: 94%;
-  height: 2px;
-  bottom: 0;
-  margin: auto;
-}
-
 </style>

@@ -38,9 +38,13 @@ export default {
 
 <style scoped>
 ul {
-  width: inherit;
+  width: 100%;
   height: inherit;
   padding: 80px 30px 30px 30px;
+}
+
+ul li {
+  width: 100%;
 }
 
 ul li span.title {
@@ -89,5 +93,13 @@ ul li p.text span.keyword {
 
 ul li p.text span.keyword a {
   color: royalblue;
+}
+
+@media only screen and (max-width: 1350px) {
+
+ul {
+  padding: 80px 8px 30px 8px;
+}
+
 }
 </style>
