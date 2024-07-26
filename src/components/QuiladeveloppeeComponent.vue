@@ -38,9 +38,13 @@ export default {
 
 <style scoped>
 ul {
-  width: inherit;
+  width: 100%;
   height: inherit;
   padding: 80px 30px 30px 30px;
+}
+
+ul li {
+  width: 100%;
 }
 
 ul li span.title {

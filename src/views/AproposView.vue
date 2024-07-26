@@ -29,4 +29,12 @@ div.container {
   margin: 20px auto;
   display: flex;
 }
+
+@media only screen and (max-width: 1350px) {
+
+  div.container {
+    width: 65%;
+  }
+  
+}
 </style>
