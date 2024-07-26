@@ -10,7 +10,7 @@
         </li>
       </ul>
       <span>
-        <img src="../assets/images/clipboard.png" alt="" title="copier ces codes">
+        <img src="../assets/images/copy_code.png" alt="" title="copier ces codes">
       </span>
     </div>
     <div class="scripts">
