@@ -50,4 +50,32 @@ div.aproposblog {
 div.aproposblog ul li span.title p.question a {
   color: #000;
 }
+
+
+@media only screen and (max-width: 1350px) {
+
+div.aproposblog {
+  margin-left: -100px;
+}
+
+
+@media only screen and (max-width: 830px) {
+
+div.aproposblog {
+  width: 215px;
+  margin-left: -130px;
+  margin-right: 20px;
+}
+
+}
+
+@media only screen and (max-width: 750px) {
+
+div.aproposblog {
+  display: none;
+}
+
+}
+
+}
 </style>
