@@ -9,16 +9,15 @@
           <RouterLink to="/python">python</RouterLink>
         </li>
       </ul>
-      <span>
-        <img src="../assets/images/copy_code.png" alt="" title="copier ces codes">
+      <span @click="copyScript()">
+        <p v-if="scriptCopied">copié</p>
+        <img src="../assets/images/copy_code.png" alt="" title="copier ces codes" />
       </span>
     </div>
     <div class="scripts">
       <RouterView />
     </div>
-    <div class="resultats">
-        []
-    </div>
+    <div class="resultats">[]</div>
   </div>
 </template>
 
@@ -27,10 +26,26 @@ import { RouterLink, RouterView } from 'vue-router'
 
 export default {
   name: 'AccueilTestComponent',
+  data: function () {
+    return {
+      scriptCopied: false
+    }
+  },
   components: {
     RouterView,
     RouterLink
-  }
+  },
+  methods: {
+    copyScript: function () {
+      var el = document.querySelector('.scripts pre')
+      window.navigator.clipboard.writeText(el.innerText)
+      this.scriptCopied = true
+      window.setTimeout(() => {
+        this.scriptCopied = false
+      }, 1500)
+    }
+  },
+  mounted: function () {}
 }
 </script>
 
@@ -87,22 +102,31 @@ div.container div.langages span {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 div.container div.langages span img {
-    width: 20px;
-    cursor: pointer;
+  width: 20px;
+  cursor: pointer;
+}
+
+div.container div.langages span img:active {
+  transform: scale(0.9);
+}
+
+div.container div.langages span p {
+  color: white;
+  font-size: 11px;
+  margin-right: 5px;
 }
 
 div.container div.resultats {
-    width: 100%;
-    height: 45px;
-    border-radius: 3px;
-    background-color: #5d2417;
-    margin-top: 40px;
-    padding: 12px;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #5d2417;
+  margin-top: 40px;
+  padding: 12px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 </style>
