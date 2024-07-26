@@ -21,7 +21,7 @@
             href="https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS.git"
             target="_blank"
             title="dépôt github de APIPOST 🔗"
-            >htts://github.com</a
+            >https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS</a
           ></span
         >
       </p>
