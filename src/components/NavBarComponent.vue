@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<template>
-=======
->>>>>>> 41290b10199cbefab922d9581f70e03ee7b69651
-  <nav>
+  <template>
+    <nav>
     <span id="logo">
       <img src="../assets/images/logo_apipost.png" alt="logo de APIPOST" title="logo de APIPOST" />
       <p>APIPOST</p>
@@ -21,7 +18,6 @@
         <RouterLink to="/apropos">A propos</RouterLink>
       </li>
       <li>
-<<<<<<< HEAD
         <a
           href="https://github.com/IALYFrancisco/APIPOST-CLIENT-VUE.JS.git"
           target="_blank"
@@ -31,13 +27,6 @@
       </li>
     </ul>
     <img src="../assets/images/menu.png" alt="" />
-=======
-        <a href="https://github.com" target="_blank" title="Lien github de APIPOST">
-          <img src="../assets/images/github.png" alt="" />
-        </a>
-      </li>
-    </ul>
->>>>>>> 41290b10199cbefab922d9581f70e03ee7b69651
   </nav>
 </template>
 
@@ -67,10 +56,6 @@ nav {
   background-size: cover;
   background-position: 30px 0 0 0;
   background-repeat: no-repeat;
-<<<<<<< HEAD
-=======
-  position: relative;
->>>>>>> 41290b10199cbefab922d9581f70e03ee7b69651
   z-index: 1;
   color: white;
 }
@@ -101,13 +86,8 @@ nav span#logo img {
 nav ul {
   display: flex;
   justify-content: space-around;
-<<<<<<< HEAD
-  align-items: center;
-  width: 30%;
-=======
   width: 40%;
   align-items: center;
->>>>>>> 41290b10199cbefab922d9581f70e03ee7b69651
 }
 
 nav > img {
@@ -129,12 +109,8 @@ nav ul li a img {
     display: none;
   }
 }
-<<<<<<< HEAD
-</style>
-=======
 
-/*nav ul li a img {
+nav ul li a img {
   width: 35px;
-}*/
+}
 </style>
->>>>>>> 41290b10199cbefab922d9581f70e03ee7b69651
