@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     copyScript: function () {
-      var el = document.querySelector('.scripts pre')
+      var el: any = document.querySelector('.scripts pre')
       window.navigator.clipboard.writeText(el.innerText)
       this.scriptCopied = true
       window.setTimeout(() => {
