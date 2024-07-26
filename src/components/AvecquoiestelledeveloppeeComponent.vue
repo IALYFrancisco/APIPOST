@@ -14,8 +14,8 @@
             <p class="question">La partie front:</p>
         </span>
         <p class="subtext">
-          L'interface utilisateur de <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est développée avec le framework javascript <span class="keyword"><a href="https://vue.com" target="_blank">vue.js</a></span> en
-          profitant de toutes ses performances. La bibliothèque <span class="keyword"><a href="https://axios.com" target="_blank">axios</a></span> y est ajouter avec pour la
+          L'interface utilisateur de <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est développée avec le framework javascript <span class="keyword"><a href="https://vuejs.org/" target="_blank">vue.js</a></span> en
+          profitant de toutes ses performances. La bibliothèque <span class="keyword"><a href="https://axios-http.com/" target="_blank">axios</a></span> y est ajouter avec pour la
           gestion d'APIs. <br />
         </p>
         <span class="subtitle">
@@ -23,8 +23,8 @@
             <p class="question">La partie back:</p>
         </span>
         <p class="subtext" style="margin-bottom: 20px;">
-          Le côté seveur de <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est développée avec <span class="keyword"><a href="https://node.com" target="_blank">node.js</a></span> et <span class="keyword"><a href="https://express.js" target="_blank">express.js</a></span>. La base de données
-          utilisées avec est <span class="keyword"><a href="https://mongodb.com" target="_blank">mongodb</a></span>.
+          Le côté seveur de <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est développée avec <span class="keyword"><a href="https://nodejs.org/fr/" target="_blank">node.js</a></span> et <span class="keyword"><a href="https://expressjs.com/" target="_blank">express.js</a></span>. La base de données
+          utilisées avec est <span class="keyword"><a href="https://www.mongodb.com/" target="_blank">mongodb</a></span>.
         </p>
         Ces deux parties sont hébergées indépendement avec la plateforme <span class="keyword"><a href="https://render.com" target="_blank">render</a></span>.
     </p>

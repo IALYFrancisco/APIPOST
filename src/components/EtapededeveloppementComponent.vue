@@ -8,11 +8,11 @@
       <p class="text">
         Le serveur de <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> était
         développée en premier. Puis ses APIs ont été testés avec
-        <span class="keyword"><a href="https://postman.com" target="_blank">postman</a></span
+        <span class="keyword"><a href="https://www.postman.com" target="_blank">postman</a></span
         >. Ensuite la création de son l'interface utilisateur. Les outils
-        <span class="keyword"><a href="https://git.com" target="_blank">git</a></span> et
-        <span class="keyword"><a href="https://github.com" target="_blank">github</a></span> ont été utilisés pour
-        la versionning de codes.
+        <span class="keyword"><a href="https://git-scm.com" target="_blank">git</a></span> et
+        <span class="keyword"><a href="https://github.com" target="_blank">github</a></span> ont été
+        utilisés pour la versionning de codes.
       </p>
     </li>
   </ul>
