@@ -6,6 +6,27 @@
   <button @click="launchScript()">lancer ce script</button>
 </template>
 
+<script lang="ts">
+import { useRequestStore } from '@/stores/requests'
+
+export default {
+  name: 'JSComponent',
+  data: function () {
+    return {
+      scriptsLaunched: false,
+      requestStore: useRequestStore(),
+    }
+  },
+  methods: {
+    launchScript() {
+      this.scriptsLaunched = true
+      // console.log(this.requestStore.data)
+      console.log(this.requestStore.getOneRequest)
+    }
+  }
+}
+</script>
+
 <style scoped>
 pre {
   height: 100%;
@@ -35,19 +56,3 @@ button:active {
   transform: scale(0.97);
 }
 </style>
-
-<script lang="ts">
-export default {
-  name: 'JSComponent',
-  data: function() {
-    return {
-      scriptsLaunched : false
-    }
-  },
-  methods : {
-    launchScript(){
-      this.scriptsLaunched = true
-    }
-  }
-}
-</script>
