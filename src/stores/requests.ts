@@ -1,16 +1,23 @@
-import { defineStore } from 'pinia'
 import axios from 'axios'
+import { defineStore } from 'pinia'
 
 export const useRequestStore: Object = defineStore('requestStore', {
-  getters: {
-    getOneRequest(): Object {
-      // axios.get('https://apipostserver.onrender.com/product/9')
-      //     .then((response) => { return response.data } )
-      return axios.get('http://localhost:3000/product/9').then((response) => {
-        // console.log(response)
-        return response.data
-      })
+  state: function () {
+    return {
+      javascriptData: null,
+      pythonData: null
     }
   },
-  actions: {}
+  getters: {
+    async getJavascriptData() {
+      await axios.get('http://localhost:3000/product/9').then(async (response: any) => {
+        this.javascriptData = await response.data
+      })
+    },
+    async getPythonData() {
+      await axios.get('http://localhost:3000/product/9').then(async (response: any) => {
+        this.pythonData = await response.data
+      })
+    }
+  }
 })

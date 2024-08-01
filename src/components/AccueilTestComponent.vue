@@ -17,18 +17,19 @@
     <div class="scripts">
       <RouterView />
     </div>
-    <div class="resultats">[]</div>
   </div>
 </template>
 
 <script lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { useRequestStore } from '@/stores/requests'
 
 export default {
   name: 'AccueilTestComponent',
   data: function () {
     return {
-      scriptCopied: false
+      scriptCopied: false,
+      requestStore: useRequestStore()
     }
   },
   components: {
@@ -117,16 +118,5 @@ div.container div.langages span p {
   color: white;
   font-size: 11px;
   margin-right: 5px;
-}
-
-div.container div.resultats {
-  width: 100%;
-  height: 45px;
-  border-radius: 3px;
-  background-color: #5d2417;
-  margin-top: 40px;
-  padding: 12px;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
 }
 </style>
