@@ -67,7 +67,7 @@ header div.banniere div.left span.title {
 .animated-text span::before {
   content: '';
   color: yellow;
-  animation: 35s infinite words;
+  animation: 20s infinite words;
 }
 
 .animated-text span::after {
@@ -75,12 +75,12 @@ header div.banniere div.left span.title {
   position: absolute;
   width: 0;
   height: 120%;
-  background-color: #5d2417ed;
+  background-color: #5d2417;
   border-left: 1px solid white;
   right: -8px;
   animation:
-    cursor 0.8s infinite,
-    typing 50s steps(35) infinite;
+    cursor 0.9s infinite,
+    typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
@@ -91,42 +91,51 @@ header div.banniere div.left span.title {
 
 @keyframes words {
   0%,
-  33.33% {
+  25% {
     content: 'est simple à utiliser';
   }
-  34.33%,
-  66.66% {
+  36%,
+  60% {
     content: 'vous donne un accès total à un serveur.';
   }
-  67.66%,
+  76%,
   100% {
     content: 'vous offre des données structurées.';
   }
 }
 
 @keyframes typing {
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95% {
-    width: 0;
+  0%,
+  3% {
+    width: calc(100% + 8px);
   }
 
   5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
+  25% {
+    width: 0;
+  }
+
+  27%,
+  35% {
+    width: calc(100% + 8px);
+  }
+
+  37%,
+  60% {
+    width: 0;
+  }
+
+  62%,
+  78% {
+    width: calc(100% + 8px);
+  }
+
   80%,
-  85% {
+  98% {
+    width: 0;
+  }
+
+  100% {
     width: calc(100% + 8px);
   }
 }
