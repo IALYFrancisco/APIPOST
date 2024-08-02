@@ -22,14 +22,12 @@
 
 <script lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { useRequestStore } from '@/stores/requests'
 
 export default {
   name: 'AccueilTestComponent',
   data: function () {
     return {
       scriptCopied: false,
-      requestStore: useRequestStore()
     }
   },
   components: {
@@ -38,7 +36,7 @@ export default {
   },
   methods: {
     copyScript: function () {
-      var el = document.querySelector('.scripts pre')
+      var el:any = document.querySelector('.scripts pre')
       window.navigator.clipboard.writeText(el.innerText)
       this.scriptCopied = true
       window.setTimeout(() => {
@@ -54,7 +52,7 @@ export default {
 div.container {
   width: 550px;
   height: 185px;
-  margin: auto;
+  margin: 0px auto 300px auto;
   background-color: #5d2417;
   border-radius: 5px;
 }

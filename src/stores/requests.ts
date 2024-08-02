@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
 
-export const useRequestStore: Object = defineStore('requestStore', {
+export const useRequestStore: any = defineStore('requestStore', {
   state: function () {
     return {
       javascriptData: null,
