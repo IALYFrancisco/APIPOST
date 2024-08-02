@@ -4,8 +4,11 @@
   <span style="color:white;">response = requests.get(</span><span style="color: rgb(1, 104, 1);">"https://apipostserver.onrender.com/product/9"</span><span style="color:white;">)</span>
   <span style="color:rebeccapurple;">print</span><span style="color:white">(response)</span>
   </pre>
-  <button @click="launchScript()">lancer ce script</button>
-  <div class="resultats">
+  <div class="congratulation">
+    <button @click="launchScript()">lancer ce script</button>
+    <p v-if="scriptLaunched">Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.</p>
+    <span v-if="scriptLaunched">Arrow</span>
+  </div><div class="resultats">
     <span v-if="requestStore.pythonData">
       <p class="result">
         <span style="display: block; color: white;">[</span>
@@ -49,7 +52,6 @@ button {
   box-shadow:
     1px 1px 5px #8c8c8c4a,
     -1px -1px 5px #8c8c8c4a;
-  margin-bottom: 20px;
   outline: none;
 }
 
@@ -68,6 +70,19 @@ div.container div.resultats {
   font-size: 15px;
   line-height: 25px;
 }
+
+div.congratulation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+div.congratulation p {
+  width: 55%;
+  font-size: 11px;
+}
 </style>
 
 <script lang="ts">
@@ -77,12 +92,14 @@ export default {
   name: 'PythonComponent',
   data: function () {
     return {
-      requestStore: useRequestStore()
+      requestStore: useRequestStore(),
+      scriptLaunched: false,
     }
   },
   methods: {
     async launchScript() {
       await this.requestStore.getPythonData
+      this.scriptLaunched = true
     }
   }
 }

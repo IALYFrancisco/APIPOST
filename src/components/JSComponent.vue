@@ -5,7 +5,11 @@
      <span style="color:rgb(0, 255, 255);">axios</span>.<span style="color: yellow;">get</span>('https://apipostserver.onrender.com/product/9')
         .<span style="color: yellow;">then</span>(<span style="color:rgb(0, 255, 255);;">response</span> => <span style="color:rgb(0, 255, 255);">console</span>.<span style="color: yellow;">log</span>(<span style="color:rgb(0, 255, 255);">response</span>))
   </pre>
-  <button @click="launchScript()">lancer ce script</button>
+  <div class="congratulation">
+    <button @click="launchScript()">lancer ce script</button>
+    <p v-if="scriptLaunched">Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.</p>
+    <span v-if="scriptLaunched">Arrow</span>
+  </div>
   <div class="resultats">
     <span v-if="requestStore.javascriptData">
       <p class="result">
@@ -30,12 +34,14 @@ export default {
   name: 'JSComponent',
   data: function () {
     return {
+      scriptLaunched: false,
       requestStore: useRequestStore()
     }
   },
   methods: {
     async launchScript() {
       await this.requestStore.getJavascriptData
+      this.scriptLaunched = true
     }
   }
 }
@@ -70,10 +76,9 @@ button {
   box-shadow:
     1px 1px 5px #8c8c8c4a,
     -1px -1px 5px #8c8c8c4a;
-  margin-bottom: 20px;
-  outline: none;
-}
-
+    outline: none;
+  }
+  
 button:active {
   transform: scale(0.97);
 }
@@ -88,5 +93,18 @@ div.container div.resultats {
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
   line-height: 25px;
+}
+
+div.congratulation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+div.congratulation p {
+  width: 55%;
+  font-size: 11px;
 }
 </style>
