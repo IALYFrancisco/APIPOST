@@ -27,7 +27,6 @@
 
 <script lang="ts">
 import { useRequestStore } from '@/stores/requests'
-import { request } from 'node_modules/axios/index.cjs';
 
 export default {
   name: 'JSComponent',
@@ -105,7 +104,7 @@ div.congratulation {
 }
 
 div.congratulation p {
-  width: 55%;
+  width: 40%;
   font-size: 11px;
 }
 </style>
