@@ -1,18 +1,22 @@
 <template>
-  <div v-bind:class="{ container: true }">
-    <div class="langages">
-      <ul>
-        <li>
-          <RouterLink to="/" title="javascript">javascript</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/python">python</RouterLink>
-        </li>
-      </ul>
-      <span @click="copyScript()">
-        <p v-if="scriptCopied">copié</p>
-        <img src="../assets/images/copy_code.png" alt="" title="copier ces codes" />
-      </span>
+  <div class="all_element">
+    <div class="container">
+      <div class="terminale">
+        <div class="langages">
+          <ul>
+            <li>
+              <RouterLink to="/" title="javascript">javascript</RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/python">python</RouterLink>
+            </li>
+          </ul>
+          <span @click="copyScript()">
+            <p v-if="scriptCopied">copié</p>
+            <img src="../assets/images/copy_code.png" alt="" title="copier ces codes" />
+          </span>
+        </div>
+      </div>
     </div>
     <div class="scripts">
       <RouterView />
@@ -34,7 +38,7 @@ export default {
   },
   components: {
     RouterView,
-    RouterLink
+    RouterLink,
   },
   methods: {
     copyScript: function () {
@@ -45,25 +49,33 @@ export default {
         this.scriptCopied = false
       }, 1500)
     }
-  },
-  mounted: function () {}
+  }
 }
 </script>
 
 <style scoped>
+div.all_element {
+  width: 575px;
+  margin: auto;
+}
+
 div.container {
-  width: 550px;
-  height: 185px;
-  margin: 0px auto 280px auto;
+  width: 575px;  
+  height: max-content;
+  margin: 0px auto 0px auto;
+}
+
+div.container div.terminale {
   background-color: #5d2417;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 div.container.active {
   margin: 0px auto 480px auto;
 }
 
-div.container div.langages {
+div.container div.terminale div.langages {
   width: inherit;
   height: 40px;
   display: flex;
@@ -95,9 +107,11 @@ div.container div.langages ul li:nth-child(1) {
 
 div.container div.scripts {
   width: 100%;
-  height: 100%;
+  height: 550px;
+  margin: auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-color: #5d2417;
 }
 
 div.container div.langages span {

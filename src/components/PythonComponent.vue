@@ -1,13 +1,13 @@
 <!-- eslint-disable vue/no-parsing-error -->
 <template>
   <pre class="request">
-  <span style="color:white;">response = requests.get(</span><span style="color: rgb(1, 104, 1);">"https://apipostserver.onrender.com/product/9"</span><span style="color:white;">)</span>
-  <span style="color:rebeccapurple;">print</span><span style="color:white">(response)</span>
+    <span style="color:white;">response = requests.get(</span><span style="color: rgb(1, 104, 1);">"https://apipostserver.onrender.com/product/9"</span><span style="color:white;">)</span>
+    <span style="color:rebeccapurple;">print</span><span style="color:white">(response)</span>
   </pre>
   <div class="congratulation">
     <button @click="launchScript()">lancer ce script</button>
-    <p v-if="scriptLaunched">Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.</p>
-    <span v-if="scriptLaunched">Arrow</span>
+    <p v-if="requestStore.pythonRequestLaunched">Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.</p>
+    <span v-if="requestStore.pythonRequestLaunched">Arrow</span>
   </div><div class="resultats">
     <span v-if="requestStore.pythonData">
       <p class="result">
@@ -31,11 +31,14 @@ span.key {
 }
 
 pre.request {
+  background-color: #5d2417;
   height: 100%;
-  padding: 40px 0px 0px 0px;
+  padding: 35px 20px 0px 0px;
   line-height: 30px;
   font-family: Consolas, 'Courier New', monospace;
-  margin-bottom: -20px;
+  color: rgb(255, 129, 39);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 p.result {
@@ -59,7 +62,7 @@ button:active {
   transform: scale(0.97);
 }
 
-div.container div.resultats {
+div.resultats {
   width: 100%;
   height: max-content;
   border-radius: 3px;
@@ -77,6 +80,7 @@ div.congratulation {
   justify-content: space-between;
   padding-right: 20px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 div.congratulation p {
