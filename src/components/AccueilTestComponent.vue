@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="{ container: true, active: requestStore.javascriptRequestLaunched }">
+  <div v-bind:class="{ container: true }">
     <div class="langages">
       <ul>
         <li>
