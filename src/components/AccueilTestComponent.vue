@@ -1,39 +1,44 @@
 <template>
-  <div class="container">
-    <div class="langages">
-      <ul>
-        <li>
-          <RouterLink to="/" title="javascript">javascript</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/python">python</RouterLink>
-        </li>
-      </ul>
-      <span @click="copyScript()">
-        <p v-if="scriptCopied">copié</p>
-        <img src="../assets/images/copy_code.png" alt="" title="copier ces codes" />
-      </span>
+  <div class="all_element">
+    <div class="container">
+      <div class="terminale">
+        <div class="langages">
+          <ul>
+            <li>
+              <RouterLink to="/" title="javascript">javascript</RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/python">python</RouterLink>
+            </li>
+          </ul>
+          <span @click="copyScript()">
+            <p v-if="scriptCopied">copié</p>
+            <img src="../assets/images/copy_code.png" alt="" title="copier ces codes" />
+          </span>
+        </div>
+      </div>
     </div>
     <div class="scripts">
       <RouterView />
     </div>
-    <div class="resultats">[]</div>
   </div>
 </template>
 
 <script lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { useRequestStore } from '@/stores/requests'
 
 export default {
   name: 'AccueilTestComponent',
   data: function () {
     return {
-      scriptCopied: false
+      scriptCopied: false,
+      requestStore: useRequestStore()
     }
   },
   components: {
     RouterView,
-    RouterLink
+    RouterLink,
   },
   methods: {
     copyScript: function () {
@@ -44,21 +49,33 @@ export default {
         this.scriptCopied = false
       }, 1500)
     }
-  },
-  mounted: function () {}
+  }
 }
 </script>
 
 <style scoped>
-div.container {
-  width: 550px;
-  height: 185px;
+div.all_element {
+  width: 575px;
   margin: auto;
-  background-color: #5d2417;
-  border-radius: 5px;
 }
 
-div.container div.langages {
+div.container {
+  width: 575px;  
+  height: max-content;
+  margin: 0px auto 0px auto;
+}
+
+div.container div.terminale {
+  background-color: #5d2417;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+div.container.active {
+  margin: 0px auto 480px auto;
+}
+
+div.container div.terminale div.langages {
   width: inherit;
   height: 40px;
   display: flex;
@@ -90,9 +107,11 @@ div.container div.langages ul li:nth-child(1) {
 
 div.container div.scripts {
   width: 100%;
-  height: 100%;
+  height: 550px;
+  margin: auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-color: #5d2417;
 }
 
 div.container div.langages span {
@@ -117,16 +136,5 @@ div.container div.langages span p {
   color: white;
   font-size: 11px;
   margin-right: 5px;
-}
-
-div.container div.resultats {
-  width: 100%;
-  height: 45px;
-  border-radius: 3px;
-  background-color: #5d2417;
-  margin-top: 40px;
-  padding: 12px;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
 }
 </style>
