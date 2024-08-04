@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 ul {
-  width: 900px;
+  width: 67%;
   margin: 10px auto;
   height: inherit;
   padding: 80px 30px 30px 30px;
