@@ -7,7 +7,7 @@
       <button @click="launchScript()">lancer ce script</button>
       <p v-if="requestStore.javascriptRequestLaunched">Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.</p>
       <span v-if="requestStore.javascriptRequestLaunched">
-        <button class="goToGuide">
+        <button class="goToGuide" v-on:click="goToGuides">
           Guides
           <img src="../assets/images/arrow.png" alt="">
         </button>
@@ -45,6 +45,9 @@ export default {
     async launchScript() {
       await this.requestStore.getJavascriptData
       this.scriptLaunched = true
+    },
+    goToGuides: function() {
+      this.$router.push('/guides')
     }
   }
 }
