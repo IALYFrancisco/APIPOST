@@ -7,7 +7,12 @@
   <div class="congratulation">
     <button @click="launchScript()">lancer ce script</button>
     <p v-if="requestStore.pythonRequestLaunched">Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.</p>
-    <span v-if="requestStore.pythonRequestLaunched">Arrow</span>
+    <span v-if="requestStore.pythonRequestLaunched">
+      <button class="goToGuide">
+        Guides
+        <img src="../assets/images/arrow.png" alt="">
+      </button>
+    </span>
   </div><div class="resultats">
     <span v-if="requestStore.pythonData">
       <p class="result">
@@ -84,8 +89,23 @@ div.congratulation {
 }
 
 div.congratulation p {
-  width: 55%;
+  width: 40%;
   font-size: 11px;
+}
+
+button.goToGuide {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: royalblue;
+  border: 2px royalblue solid;
+  height: 35px;
+}
+
+button.goToGuide img {
+  width: 20px;
+  margin-left: 10px;
 }
 </style>
 
