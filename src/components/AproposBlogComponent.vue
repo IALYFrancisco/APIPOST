@@ -4,7 +4,9 @@
       <li>
         <span class="title">
           <p class="question">
-            <RouterLink to="/apropos">Qui l'a développée?</RouterLink>
+            <RouterLink to="/apropos" exact-active-class="router-link-active"
+              >Qui l'a développée?</RouterLink
+            >
           </p>
         </span>
       </li>
@@ -49,33 +51,33 @@ div.aproposblog {
 
 div.aproposblog ul li span.title p.question a {
   color: #000;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
 }
 
+div.aproposblog ul li span.title p.question a.router-link-active {
+  border-left: 2px solid #5d2417;
+  padding-left: 10px;
+}
 
 @media only screen and (max-width: 1350px) {
+  div.aproposblog {
+    margin-left: -100px;
+  }
 
-div.aproposblog {
-  margin-left: -100px;
-}
+  @media only screen and (max-width: 830px) {
+    div.aproposblog {
+      width: 215px;
+      margin-left: -130px;
+      margin-right: 20px;
+    }
+  }
 
-
-@media only screen and (max-width: 830px) {
-
-div.aproposblog {
-  width: 215px;
-  margin-left: -130px;
-  margin-right: 20px;
-}
-
-}
-
-@media only screen and (max-width: 750px) {
-
-div.aproposblog {
-  display: none;
-}
-
-}
-
+  @media only screen and (max-width: 750px) {
+    div.aproposblog {
+      display: none;
+    }
+  }
 }
 </style>
