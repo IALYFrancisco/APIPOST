@@ -27,7 +27,7 @@
       </nav>
       <div class="message">
         <p class="title">Laissez-nous un message</p>
-        <form action="" method="post" id="inputs">
+        <form action="" method="" id="inputs" v-on:submit.prevent="">
           <div class="element">
             <input
               required
