@@ -100,7 +100,7 @@ nav ul li a img {
   width: 35px;
 }
 
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 880px) {
   nav img {
     display: block;
   }
