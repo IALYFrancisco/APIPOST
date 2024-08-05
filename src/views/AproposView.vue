@@ -26,9 +26,8 @@ export default {
 div.container {
   width: 900px;
   height: max-content;
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
   display: flex;
-  /* background-color: red; */
 }
 
 @media only screen and (max-width: 1350px) {

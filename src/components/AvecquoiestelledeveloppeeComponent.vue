@@ -42,7 +42,7 @@ export default {
 ul {
   width: 100%;
   height: inherit;
-  padding: 80px 30px 30px 30px;
+  padding: 80px 30px 0px 30px;
 }
 
 ul li {
