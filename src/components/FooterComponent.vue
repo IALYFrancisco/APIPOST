@@ -28,7 +28,10 @@
       <div class="message">
         <p class="title">Laissez-nous un message</p>
         <form action="" method="post" id="inputs">
-            <input type="email" name="visitor_email" id="visitor_email" placeholder="Votre email">
+            <div class="element">
+              <input type="email" name="visitor_email" id="visitor_email" placeholder="Votre email">
+              <img src="../assets/images/enveloppe.png" alt="">
+            </div>
             <textarea name="visitor_message" id="visitor_message" placeholder="Votre message"></textarea>
             <button>envoyer</button>
         </form>
@@ -178,5 +181,20 @@ div.bg_image footer div.copyrighting {
 div.bg_image footer div.copyrighting p a:hover {
     text-decoration: underline;
     color: yellow;
+}
+
+div.bg_image footer div.message form div.element {
+  position: relative;
+  width: 325px;
+  height: max-content;
+  display: flex;
+  align-items: center;
+}
+
+div.bg_image footer div.message form div.element img {
+  position: absolute;
+  width: 20px;
+  right: 9px;
+  top: 8px;
 }
 </style>
