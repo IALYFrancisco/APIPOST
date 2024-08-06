@@ -99,10 +99,17 @@ ul li p.text span.keyword a {
 
 ul li p.text span.subtitle {
   display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
 }
 
 ul li p.text span.subtitle p.question {
   margin-left: 5px;
+  border-bottom: solid #5d2417 2px;
+}
+
+ul li p.text p.subtext {
+  margin-left: 40px;
 }
 
 @media only screen and (max-width: 1350px) {
