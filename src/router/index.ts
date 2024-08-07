@@ -8,6 +8,11 @@ import AccueilView from '@/views/AccueilView.vue'
 import AproposView from '@/views/AproposView.vue'
 import GuidesView from '@/views/GuidesView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import RessourcesComponent from '@/components/RessourcesComponent.vue'
+import GetComponent from '@/components/GetComponent.vue'
+import PutComponent from '@/components/PutComponent.vue'
+import DeleteComponent from '@/components/DeleteComponent.vue'
+import PatchComponent from '@/components/PatchComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,7 +29,22 @@ const router = createRouter({
     {
       path: '/guides',
       name: 'guides',
-      component: GuidesView
+      component: GuidesView,
+      children: [
+        { path: '', name: 'ressources', component: RessourcesComponent },
+        {
+          path: 'get',
+          name: 'get',
+          component: GetComponent
+        },
+        {
+          path: 'put',
+          name: 'put',
+          component: PutComponent
+        },
+        { path: 'patch', name: 'patch', component: PatchComponent },
+        { path: 'delete', name: 'delete', component: DeleteComponent }
+      ]
     },
     {
       path: '/apropos',
