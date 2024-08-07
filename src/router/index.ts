@@ -13,6 +13,7 @@ import GetComponent from '@/components/GetComponent.vue'
 import PutComponent from '@/components/PutComponent.vue'
 import DeleteComponent from '@/components/DeleteComponent.vue'
 import PatchComponent from '@/components/PatchComponent.vue'
+import PostComponent from '../components/PostComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,7 +44,8 @@ const router = createRouter({
           component: PutComponent
         },
         { path: 'patch', name: 'patch', component: PatchComponent },
-        { path: 'delete', name: 'delete', component: DeleteComponent }
+        { path: 'delete', name: 'delete', component: DeleteComponent },
+        { path: 'post', name: 'post', component: PostComponent }
       ]
     },
     {

@@ -18,6 +18,13 @@
       <li>
         <span class="title">
           <p class="question">
+            <RouterLink to="/guides/post">POST</RouterLink>
+          </p>
+        </span>
+      </li>
+      <li>
+        <span class="title">
+          <p class="question">
             <RouterLink to="/guides/put">PUT</RouterLink>
           </p>
         </span>
@@ -44,7 +51,7 @@
 div.aproposblog {
   border-right: 0.1px solid #33333334;
   width: 120px;
-  height: 30vh;
+  height: 35vh;
   margin-left: -200px;
   margin-top: 50px;
   margin-right: 70px;
