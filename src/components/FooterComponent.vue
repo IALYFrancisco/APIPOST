@@ -10,9 +10,6 @@
             <RouterLink to="/guides">Guides</RouterLink>
           </li>
           <li>
-            <RouterLink to="/ressources">Ressources</RouterLink>
-          </li>
-          <li>
             <RouterLink to="/apropos">A propos</RouterLink>
           </li>
           <li>
@@ -87,7 +84,7 @@ div.bg_image footer nav.for_navigation {
 div.bg_image footer nav.for_navigation ul {
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 30%;
   align-items: center;
 }
 

@@ -12,9 +12,6 @@
         <RouterLink to="/guides">Guides</RouterLink>
       </li>
       <li>
-        <RouterLink to="/ressources">Ressources</RouterLink>
-      </li>
-      <li>
         <RouterLink to="/apropos">A propos</RouterLink>
       </li>
       <li>
@@ -35,9 +32,6 @@
       </li>
       <li>
         <RouterLink to="/guides">Guides</RouterLink>
-      </li>
-      <li>
-        <RouterLink to="/ressources">Ressources</RouterLink>
       </li>
       <li class="apropos" v-on:click="openAproposLi" v-bind:class="{ opened: openLiApropos }">
         A propos
@@ -140,7 +134,7 @@ nav.principal span#logo img {
 nav.principal ul {
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 30%;
   align-items: center;
 }
 
