@@ -10,7 +10,7 @@
         <span class="keyword"><RouterLink to="/">APIPOST</RouterLink></span> est divisée en deux
         grandes parties: la partie front et la partie back. <br />
         <span class="subtitle">
-            <p class="numero">2.1</p>
+            <p class="numero">2.1.</p>
             <p class="question">La partie front:</p>
         </span>
         <p class="subtext">
@@ -19,7 +19,7 @@
           gestion d'APIs. <br />
         </p>
         <span class="subtitle">
-            <p class="numero">2.2</p>
+            <p class="numero">2.2.</p>
             <p class="question">La partie back:</p>
         </span>
         <p class="subtext" style="margin-bottom: 20px;">
@@ -42,7 +42,7 @@ export default {
 ul {
   width: 100%;
   height: inherit;
-  padding: 80px 30px 30px 30px;
+  padding: 80px 30px 0px 30px;
 }
 
 ul li {
@@ -95,6 +95,21 @@ ul li p.text span.keyword {
 
 ul li p.text span.keyword a {
   color: royalblue;
+}
+
+ul li p.text span.subtitle {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+ul li p.text span.subtitle p.question {
+  margin-left: 5px;
+  border-bottom: solid #5d2417 2px;
+}
+
+ul li p.text p.subtext {
+  margin-left: 40px;
 }
 
 @media only screen and (max-width: 1350px) {

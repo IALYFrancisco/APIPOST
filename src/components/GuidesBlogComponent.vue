@@ -4,32 +4,42 @@
       <li>
         <span class="title">
           <p class="question">
-            <RouterLink to="/apropos" exact-active-class="router-link-active"
-              >Qui l'a développée?</RouterLink
-            >
+            <RouterLink to="/guides" exact-active-class="router-link-active">Ressources</RouterLink>
           </p>
         </span>
       </li>
       <li>
         <span class="title">
           <p class="question">
-            <RouterLink to="/apropos/avec quoiestelledeveloppee"
-              >Avec quoi est-elle développée?</RouterLink
-            >
+            <RouterLink to="/guides/get">GET</RouterLink>
           </p>
         </span>
       </li>
       <li>
         <span class="title">
           <p class="question">
-            <RouterLink to="/apropos/etapesdedeveloppement">Etapes de développement</RouterLink>
+            <RouterLink to="/guides/post">POST</RouterLink>
           </p>
         </span>
       </li>
       <li>
         <span class="title">
           <p class="question">
-            <RouterLink to="/apropos/github">Github</RouterLink>
+            <RouterLink to="/guides/put">PUT</RouterLink>
+          </p>
+        </span>
+      </li>
+      <li>
+        <span class="title">
+          <p class="question">
+            <RouterLink to="/guides/patch">PATCH</RouterLink>
+          </p>
+        </span>
+      </li>
+      <li>
+        <span class="title">
+          <p class="question">
+            <RouterLink to="/guides/delete">DELETE</RouterLink>
           </p>
         </span>
       </li>
@@ -40,7 +50,7 @@
 <style scoped>
 div.aproposblog {
   border-right: 0.1px solid #33333334;
-  width: 225px;
+  width: 120px;
   height: 35vh;
   margin-left: -200px;
   margin-top: 50px;
@@ -68,7 +78,7 @@ div.aproposblog ul li span.title p.question a.router-link-active {
 
   @media only screen and (max-width: 830px) {
     div.aproposblog {
-      width: 215px;
+      width: 120px;
       margin-left: -130px;
       margin-right: 20px;
     }

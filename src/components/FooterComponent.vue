@@ -10,9 +10,6 @@
             <RouterLink to="/guides">Guides</RouterLink>
           </li>
           <li>
-            <RouterLink to="/ressources">Ressources</RouterLink>
-          </li>
-          <li>
             <RouterLink to="/apropos">A propos</RouterLink>
           </li>
           <li>
@@ -87,7 +84,7 @@ div.bg_image footer nav.for_navigation {
 div.bg_image footer nav.for_navigation ul {
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 30%;
   align-items: center;
 }
 
@@ -207,5 +204,41 @@ div.bg_image footer div.message form div.element img {
   width: 20px;
   right: 9px;
   top: 7px;
+}
+
+@media only screen and (max-width: 820px) {
+  div.bg_image footer nav.for_navigation {
+    width: 100%;
+    height: max-content;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  div.bg_image footer nav.for_navigation ul {
+    width: 100%;
+    height: max-content;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  div.bg_image footer nav.for_navigation ul li {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  div.bg_image footer div.message form div.element {
+    width: 100%;
+    margin: 0 auto 10px auto;
+  }
+
+  footer div.message form input[type='email'] {
+    width: 100%;
+  }
+
+  footer div.message form textarea {
+    width: 100%;
+    margin: 0 auto 10px auto;
+  }
 }
 </style>

@@ -1,10 +1,15 @@
 <template>
     <div>
-        Ressources view
+        Patch component
     </div>
 </template>
+
 <script lang="ts">
+
     export default {
-        name: 'RessourcesView'
+
     }
+
 </script>
+
+<style scoped></style>
