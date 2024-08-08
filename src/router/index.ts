@@ -14,6 +14,8 @@ import PutComponent from '@/components/PutComponent.vue'
 import DeleteComponent from '@/components/DeleteComponent.vue'
 import PatchComponent from '@/components/PatchComponent.vue'
 import PostComponent from '../components/PostComponent.vue'
+import GetJsComponent from '@/components/GetJsComponent.vue'
+import GetPyComponent from '@/components/GetPyComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,7 +38,11 @@ const router = createRouter({
         {
           path: 'get',
           name: 'get',
-          component: GetComponent
+          component: GetComponent,
+          children: [
+            { path: '', name: 'getjscomponent', component: GetJsComponent },
+            { path: 'getpython', name: 'getpythoncomponent', component: GetPyComponent }
+          ]
         },
         {
           path: 'put',
