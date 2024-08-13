@@ -10,11 +10,65 @@
       </div>
       <div class="right">
         <div class="terminal1">
-          <span class="command">
-            # CURL -X GET "http://127.0.0.1:3000/all_products"
-          </span>
+          <div class="header">
+            <div class="bulle"></div>
+            <div class="bulle"></div>
+            <div class="bulle"></div>
+          </div>
+          <div class="script">
+            <span class="command"
+              >:~ <span style="color: royalblue">curl</span>
+              <span style="margin: 0 3px 0 3px; color: white">-X</span>
+              <span style="color: white">GET</span>
+              <span style="color: rgb(255, 129, 39); margin-left: 3px"
+                >"http://127.0.0.1:3000/all_products"</span
+              ></span
+            >
+            <span class="curl_response">
+              [{"_id":0,"name":"MENA","price":"200","description":"Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Neque magni, eos assumenda dolore doloremque facilis
+              libero iusto? Nobis, blanditiis
+              doloribus?"},{"_id":1,"name":"chapeau","price":"29.99","description":"Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Neque magni, eos assumenda dolore
+              doloremque facilis libero iusto? Nobis, blanditiis
+              doloribus?"},{"_id":2,"name":"ceinture","price":"9.99","description":"Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Neque magni, eos assumenda dolore
+              doloremque facilis libero iusto? Nobis, blanditiis
+              doloribus?"}{"_id":3,"name":"chaussette","price":"15.99","description":"Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Neque magni, eos assumenda dolore
+              doloremque facilis libero iusto? Nobis, blanditiis doloribus?"},
+            </span>
+          </div>
         </div>
-        <div class="terminal2"></div>
+        <div class="terminal2">
+          <div class="header">
+            <div class="bulle"></div>
+            <div class="bulle"></div>
+            <div class="bulle"></div>
+          </div>
+          <div class="script">
+            <span class="command">:~ <span style="color: royalblue">node</span></span
+            ><br />
+            <span class="curl_response">
+              <span style="font-size: 9px">Welcome to Node.js v20.16.0.</span><br />
+              <span style="font-size: 9px">Type ".help" for more information.</span><br />
+              <span
+                >> <span style="color: yellow">fetch</span>(<span style="color: rgb(255, 129, 39)"
+                  >'http://127.0.0.1:3000/all_products'</span
+                >).<br /><span style="color: yellow; margin-left: 25px">then</span>(
+                <span style="color: royalblue">async</span> (response) => { <br /><span
+                  style="color: royalblue; margin-left: 45px"
+                  >console</span
+                >.<span style="color: yellow">log</span>(
+                <span style="color: pink">await</span> response.status,
+                <span style="color: pink">await</span> response.statusText) <br />
+                <span style="margin-left: 25px">})</span></span
+              ><br />
+              >
+              <span style="font-size: 10px; color: yellow;">200 <span style="color: green; margin-left: 5px;">OK</span></span>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -66,7 +120,73 @@ header div.banniere div.left span.title {
 
 header div.banniere div.right {
   width: 50%;
-  background-color: rebeccapurple;
+  height: 256px;
+  margin-top: -90px;
+  /* background-color: rebeccapurple; */
+  position: relative;
+  overflow: hidden;
+}
+
+header div.banniere div.right div.terminal1,
+header div.banniere div.right div.terminal2 {
+  width: 400px;
+  height: 200px;
+  background-color: #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+header div.banniere div.right div.terminal2 {
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  box-shadow: 0px 20px 120px #000000;
+}
+
+header div.banniere div.right div.terminal1 div.script,
+header div.banniere div.right div.terminal2 div.script {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: rgb(152, 152, 152);
+}
+
+header div.banniere div.right div.terminal1 div.script span.curl_response {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  text-align: justify;
+}
+
+header div.banniere div.right div.terminal1 div.header,
+header div.banniere div.right div.terminal2 div.header {
+  width: 100%;
+  height: 25px;
+  background-color: rgb(182, 182, 182);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+header div.banniere div.right div.terminal1 div.header div.bulle,
+header div.banniere div.right div.terminal2 div.header div.bulle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: 5px;
+}
+
+header div.banniere div.right div.terminal1 div.header div.bulle:nth-child(2),
+header div.banniere div.right div.terminal2 div.header div.bulle:nth-child(2) {
+  background-color: green;
+}
+
+header div.banniere div.right div.terminal1 div.header div.bulle:nth-child(3),
+header div.banniere div.right div.terminal2 div.header div.bulle:nth-child(3) {
+  background-color: yellow;
 }
 
 .animated-text {
