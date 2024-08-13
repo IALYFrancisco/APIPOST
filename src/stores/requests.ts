@@ -12,13 +12,13 @@ export const useRequestStore: any = defineStore('requestStore', {
   },
   getters: {
     async getJavascriptData() {
-      await axios.get('http://localhost:3000/product/9').then(async (response: any) => {
+      await axios.get(process.env.GET_ONE_PRODUCT_URL).then(async (response: any) => {
         this.javascriptData = await response.data
       })
       this.javascriptRequestLaunched = true
     },
     async getPythonData() {
-      await axios.get('http://localhost:3000/product/9').then(async (response: any) => {
+      await axios.get(process.env.GET_ONE_PRODUCT_URL).then(async (response: any) => {
         this.pythonData = await response.data
       })
       this.pythonRequestLaunched = true
