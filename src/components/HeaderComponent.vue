@@ -8,6 +8,14 @@
           <span></span>
         </div>
       </div>
+      <div class="right">
+        <div class="terminal1">
+          <span class="command">
+            # CURL -X GET "http://127.0.0.1:3000/all_products"
+          </span>
+        </div>
+        <div class="terminal2"></div>
+      </div>
     </div>
   </header>
 </template>
@@ -44,6 +52,7 @@ header div.banniere {
   position: relative;
   z-index: 1;
   padding: 100px 100px 0 100px;
+  display: flex;
 }
 
 header div.banniere div.left {
@@ -53,6 +62,11 @@ header div.banniere div.left {
 header div.banniere div.left span.title {
   font-size: 50px;
   color: white;
+}
+
+header div.banniere div.right {
+  width: 50%;
+  background-color: rebeccapurple;
 }
 
 .animated-text {
