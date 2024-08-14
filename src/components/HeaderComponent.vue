@@ -65,7 +65,9 @@
                 <span style="margin-left: 25px">})</span></span
               ><br />
               >
-              <span style="font-size: 10px; color: yellow;">200 <span style="color: green; margin-left: 5px;">OK</span></span>
+              <span style="font-size: 10px; color: yellow"
+                >200 <span style="color: green; margin-left: 5px">OK</span></span
+              >
             </span>
           </div>
         </div>
@@ -122,7 +124,6 @@ header div.banniere div.right {
   width: 50%;
   height: 256px;
   margin-top: -90px;
-  /* background-color: rebeccapurple; */
   position: relative;
   overflow: hidden;
 }
@@ -175,18 +176,18 @@ header div.banniere div.right div.terminal2 div.header div.bulle {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #ff0000;
   margin-left: 5px;
 }
 
 header div.banniere div.right div.terminal1 div.header div.bulle:nth-child(2),
 header div.banniere div.right div.terminal2 div.header div.bulle:nth-child(2) {
-  background-color: green;
+  background-color: #ffff00;
 }
 
 header div.banniere div.right div.terminal1 div.header div.bulle:nth-child(3),
 header div.banniere div.right div.terminal2 div.header div.bulle:nth-child(3) {
-  background-color: yellow;
+  background-color: #00ff00;
 }
 
 .animated-text {
