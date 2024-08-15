@@ -86,7 +86,7 @@ export default {
 <style scoped>
 header {
   width: 100%;
-  height: 40vh;
+  height: 266px;
   background-image: url('../assets/images/background_image (3).jpg');
   background-size: cover;
   background-position: center;
@@ -126,6 +126,7 @@ header div.banniere div.right {
   margin-top: -90px;
   position: relative;
   overflow: hidden;
+  max-width: 600px;
 }
 
 header div.banniere div.right div.terminal1,
