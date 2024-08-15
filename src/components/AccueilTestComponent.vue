@@ -137,4 +137,14 @@ div.container div.langages span p {
   font-size: 11px;
   margin-right: 5px;
 }
+
+@media only screen and (max-width: 609px) {
+  div.all_element {
+    width: 90%;
+  }
+
+  div.all_element div.container {
+    width: 100%;
+  }
+}
 </style>

@@ -78,4 +78,10 @@ ul li p.text span.keyword {
 ul li p.text span.keyword a {
   color: royalblue;
 }
+
+@media only screen and (max-width: 990px) {
+  ul {
+    width: 95%;
+  }
+}
 </style>
