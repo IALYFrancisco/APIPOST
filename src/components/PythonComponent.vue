@@ -107,6 +107,31 @@ button.goToGuide img {
   width: 20px;
   margin-left: 10px;
 }
+
+
+@media only screen and (max-width: 609px) {
+  pre.request {
+    font-size: 12px;
+  }
+
+  div.congratulation p {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 609px) {
+  pre.request {
+    overflow-x: scroll;
+  }
+
+  div.congratulation {
+    padding-right: 0;
+  }
+
+  div.congratulation p {
+    display: none;
+  }
+}
 </style>
 
 <script lang="ts">

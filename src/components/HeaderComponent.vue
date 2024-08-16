@@ -21,7 +21,7 @@
               <span style="margin: 0 3px 0 3px; color: white">-X</span>
               <span style="color: white">GET</span>
               <span style="color: rgb(255, 129, 39); margin-left: 3px"
-                >"http://127.0.0.1:3000/all_products"</span
+                >"https://apipostserver.onrender.com/all_products"</span
               ></span
             >
             <span class="curl_response">
@@ -54,7 +54,7 @@
               <span style="font-size: 9px">Type ".help" for more information.</span><br />
               <span
                 >> <span style="color: yellow">fetch</span>(<span style="color: rgb(255, 129, 39)"
-                  >'http://127.0.0.1:3000/all_products'</span
+                  >'https://apipostserver.onrender.com/all_products'</span
                 >).<br /><span style="color: yellow; margin-left: 25px">then</span>(
                 <span style="color: royalblue">async</span> (response) => { <br /><span
                   style="color: royalblue; margin-left: 45px"
@@ -86,7 +86,7 @@ export default {
 <style scoped>
 header {
   width: 100%;
-  height: 40vh;
+  height: 266px;
   background-image: url('../assets/images/background_image (3).jpg');
   background-size: cover;
   background-position: center;
@@ -109,6 +109,8 @@ header div.banniere {
   z-index: 1;
   padding: 100px 100px 0 100px;
   display: flex;
+  max-width: 1350px;
+  margin: auto;
 }
 
 header div.banniere div.left {
@@ -126,6 +128,7 @@ header div.banniere div.right {
   margin-top: -90px;
   position: relative;
   overflow: hidden;
+  max-width: 600px;
 }
 
 header div.banniere div.right div.terminal1,
@@ -272,6 +275,56 @@ header div.banniere div.right div.terminal2 div.header div.bulle:nth-child(3) {
 
   100% {
     width: calc(100% + 8px);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  header div.banniere {
+    padding: 100px 50px 0 50px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  header div.banniere {
+    padding: 100px 20px 0 50px;
+  }
+  
+  header div.banniere div.right div.terminal2 {
+    display: none;
+  }
+
+  header div.banniere div.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  header div.banniere div.right {
+    transform: scale(0.9)
+  }
+
+  header div.banniere div.right div.terminal1 {
+    transform: scale(0.9)
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header div.banniere div.left div.animated-text span {
+    font-size: 15px;
+  }
+  header div.banniere div.left div.animated-text {
+    display: flex;
+  }
+  header div.banniere div.left span.title {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  header div.banniere div.right div.terminal1 {
+    display: none;
   }
 }
 </style>

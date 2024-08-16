@@ -26,13 +26,13 @@ export const useRequestStore: any = defineStore('requestStore', {
   }
   // getters: {
   //   async getJavascriptData() {
-  //     await axios.get('http://127.0.0.1:3000/all_products').then(async (response: any) => {
+  //     await axios.get('http://127.0.0.1:3000/product/9').then(async (response: any) => {
   //       this.javascriptData = await response.data
   //     })
   //     this.javascriptRequestLaunched = true
   //   },
   //   async getPythonData() {
-  //     await axios.get('http://127.0.0.1:3000/all_products').then(async (response: any) => {
+  //     await axios.get('http://127.0.0.1:3000/product/9').then(async (response: any) => {
   //       this.pythonData = await response.data
   //     })
   //     this.pythonRequestLaunched = true
