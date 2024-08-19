@@ -1,15 +1,9 @@
 <template>
-    <div>
-        Patch component
-    </div>
+  <div>Patch component</div>
 </template>
 
 <script lang="ts">
-
-    export default {
-
-    }
-
+export default {}
 </script>
 
 <style scoped></style>
