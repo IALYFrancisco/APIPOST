@@ -1,33 +1,44 @@
 <template>
-    <pre class="request">
+  <pre class="request">
      <span style="color:rgb(0, 255, 255);">axios</span>.<span style="color: yellow;">get</span>('https://apipostserver.onrender.com/product/9')
              .<span style="color: yellow;">then</span>(<span style="color:rgb(0, 255, 255);">response</span> => <span style="color:rgb(0, 255, 255);">console</span>.<span style="color: yellow;">log</span>(<span style="color:rgb(0, 255, 255);">response</span>))
     </pre>
-    <div class="congratulation">
-      <button @click="launchScript()">lancer ce script</button>
-      <p v-if="requestStore.javascriptRequestLaunched">Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.</p>
-      <span v-if="requestStore.javascriptRequestLaunched">
-        <button class="goToGuide" v-on:click="goToGuides">
-          Guides
-          <img src="../assets/images/arrow.png" alt="">
-        </button>
-      </span>
-    </div>
-    <div class="resultats">
-      <span v-if="requestStore.javascriptData">
-        <p class="result">
-          <span style="display: block; color: white;">[</span>
-              <span style="margin-left: 15px;">{</span>
-                <span style="margin-left: 30px; display: block;"><span class="key">"_id":</span> {{ requestStore.javascriptData[0]._id }},</span>
-                <span style="margin-left: 30px; display: block;"><span class="key">"name":</span> {{ requestStore.javascriptData[0].name }},</span>
-                <span style="margin-left: 30px; display: block;"><span class="key">"price":</span> {{ requestStore.javascriptData[0].price }},</span>
-                <span style="margin-left: 30px; display: block;"><span class="key">"description":</span> {{ requestStore.javascriptData[0].description }}</span>
-              <span style="margin-left: 15px; display: block;">}</span>
-          <span style="display: block; color: white;">]</span>
-        </p>
-      </span>
-      <span v-else style="font-family: 'Courier New', Courier, monospace;"> [] </span>
-    </div>
+  <div class="congratulation">
+    <button @click="launchScript()">lancer ce script</button>
+    <p v-if="requestStore.javascriptRequestLaunched">
+      Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.
+    </p>
+    <span v-if="requestStore.javascriptRequestLaunched">
+      <button class="goToGuide" v-on:click="goToGuides">
+        Guides
+        <img src="../assets/images/arrow.png" alt="" />
+      </button>
+    </span>
+  </div>
+  <div class="resultats">
+    <span v-if="requestStore.javascriptData">
+      <p class="result">
+        <span style="display: block; color: white">[</span>
+        <span style="margin-left: 15px">{</span>
+        <span style="margin-left: 30px; display: block"
+          ><span class="key">"_id":</span> {{ requestStore.javascriptData[0]._id }},</span
+        >
+        <span style="margin-left: 30px; display: block"
+          ><span class="key">"name":</span> {{ requestStore.javascriptData[0].name }},</span
+        >
+        <span style="margin-left: 30px; display: block"
+          ><span class="key">"price":</span> {{ requestStore.javascriptData[0].price }},</span
+        >
+        <span style="margin-left: 30px; display: block"
+          ><span class="key">"description":</span>
+          {{ requestStore.javascriptData[0].description }}</span
+        >
+        <span style="margin-left: 15px; display: block">}</span>
+        <span style="display: block; color: white">]</span>
+      </p>
+    </span>
+    <span v-else style="font-family: 'Courier New', Courier, monospace"> [] </span>
+  </div>
 </template>
 
 <script lang="ts">
@@ -46,7 +57,7 @@ export default {
       await this.requestStore.getJavascriptData
       this.scriptLaunched = true
     },
-    goToGuides: function() {
+    goToGuides: function () {
       this.$router.push('/guides')
     }
   }
@@ -55,7 +66,7 @@ export default {
 
 <style scoped>
 span.key {
-  color:rgb(0, 255, 255)
+  color: rgb(0, 255, 255);
 }
 
 pre.request {
@@ -83,9 +94,9 @@ button {
   box-shadow:
     1px 1px 5px #8c8c8c4a,
     -1px -1px 5px #8c8c8c4a;
-    outline: none;
-  }
-  
+  outline: none;
+}
+
 button:active {
   transform: scale(0.97);
 }

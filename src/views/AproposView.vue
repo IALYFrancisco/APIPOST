@@ -31,29 +31,23 @@ div.container {
 }
 
 @media only screen and (max-width: 1350px) {
-
   div.container {
     width: 80%;
     margin-left: 150px;
   }
-  
 }
 
 @media only screen and (max-width: 830px) {
-
   div.container {
     width: 80%;
     margin-left: 150px;
   }
-  
 }
 
 @media only screen and (max-width: 750px) {
-
-div.container {
-  width: 100%;
-  margin: auto;
-}
-
+  div.container {
+    width: 100%;
+    margin: auto;
+  }
 }
 </style>

@@ -38,7 +38,7 @@ export default {
   },
   components: {
     RouterView,
-    RouterLink,
+    RouterLink
   },
   methods: {
     copyScript: function () {
@@ -60,7 +60,7 @@ div.all_element {
 }
 
 div.container {
-  width: 575px;  
+  width: 575px;
   height: max-content;
   margin: 0px auto 0px auto;
 }

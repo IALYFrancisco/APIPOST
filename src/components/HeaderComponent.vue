@@ -288,7 +288,7 @@ header div.banniere div.right div.terminal2 div.header div.bulle:nth-child(3) {
   header div.banniere {
     padding: 100px 20px 0 50px;
   }
-  
+
   header div.banniere div.right div.terminal2 {
     display: none;
   }
@@ -302,11 +302,11 @@ header div.banniere div.right div.terminal2 div.header div.bulle:nth-child(3) {
 
 @media only screen and (max-width: 850px) {
   header div.banniere div.right {
-    transform: scale(0.9)
+    transform: scale(0.9);
   }
 
   header div.banniere div.right div.terminal1 {
-    transform: scale(0.9)
+    transform: scale(0.9);
   }
 }
 

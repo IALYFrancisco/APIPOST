@@ -96,10 +96,8 @@ ul li p.text span.keyword a {
 }
 
 @media only screen and (max-width: 1350px) {
-
-ul {
-  padding: 80px 8px 30px 8px;
-}
-
+  ul {
+    padding: 80px 8px 30px 8px;
+  }
 }
 </style>

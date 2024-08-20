@@ -13,20 +13,12 @@
         <p class="subtext">
           On peut récupérer la totalité des éléments d'une <span class="keyword" style="margin: 0 5px;"><RouterLink to="/guides">ressource</RouterLink></span> à l'aide de la méthode GET, prenons en exemple la <span class="keyword" style="margin: 0 5px;"><RouterLink to="/guides">ressource</RouterLink></span> <span class="keyword" style="margin: 0 5px;"><RouterLink to="/guides">products</RouterLink></span>.
         </p>
-        <!-- <span class="subtitle">
-            <p class="numero">.</p>
-            <p class="question">Routes:</p>
-        </span> -->
         <p class="subtext" style="margin-bottom: 20px;">
           <table>
               <tr>
                   <td>GET</td>
                   <td><span class="url">https://apipostserver.onrender.com/all_products</span></td>
               </tr>
-              <!-- <tr>
-                  <td>GET, POST, PUT, PATCH, DELETE</td>
-                  <td><span class="url">https://apipostserver.onrender.com/product/_id</span></td>
-              </tr> -->
           </table>
           <span class="keyword"><RouterLink to="#"></RouterLink></span>
         </p>
@@ -53,6 +45,37 @@
       <RouterView />
     </div>
   </div>
+      <p class="subtext">
+        Après avoir exécuté une requête GET à l'adresse ci-dessus, il vous sera retourné en réponse plusieurs données du ressource choisie (50 produits dans le cas du <span class="keyword" style="margin: 0 3px;"><RouterLink to="/guides">ressource</RouterLink></span><span class="keyword" style="margin: 0 3px;"><RouterLink to="/guides">products</RouterLink></span>).
+      </p>
+      <div class="result">
+        <div class="result_title">
+          données de la réponse
+        </div>
+        <div class="result_data">
+          <p>
+            [<br>
+            {
+                "_id": 0,
+                "name": "Tee-Shirt",
+                "price": "99.99",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque magni, eos assumenda dolore doloremque facilis libero iusto? Nobis, blanditiis doloribus?"
+            },
+            {
+                "_id": 1,
+                "name": "chapeau",
+                "price": "29.99",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque magni, eos assumenda dolore doloremque facilis libero iusto? Nobis, blanditiis doloribus?"
+            },
+            {
+                "_id": 2,
+                "name": "ceinture",
+                "price": "9.99",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque magni, eos assumenda dolore doloremque facilis? ... } ...
+                <br> ]
+          </p>
+        </div>
+      </div>
     </p>
     </li>
   </ul>
@@ -66,7 +89,6 @@ export default {
   data: function () {
     return {
       scriptCopied: false,
-      // requestStore: useRequestStore()
     }
   },
   components: {
@@ -153,11 +175,48 @@ ul.all li p.text span.subtitle p.question {
 
 ul.all li p.text p.subtext {
   margin-left: 95px;
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 20px;
   width: 100%;
+}
+
+ul.all li p.text div.result {
+  width: 69%;
+  height: 180px;
+  margin: 30px auto;
+}
+
+ul.all li p.text div.result div.result_title {
+  height:40px;
+  width: 100%;
+  background-color: #5d2417;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  border-bottom: 0.1px solid #893623;
+}
+
+ul.all li p.text div.result div.result_data {
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: #5d2417;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+ul.all li p.text div.result div.result_data p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 12px;
+  color: rgb(255, 129, 39);
+  line-height: 15px;
+  padding: 12px;
 }
 
 ul.all li p.text p.subtext span.url {
