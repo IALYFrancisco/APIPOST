@@ -6,7 +6,7 @@
   <div class="congratulation">
     <button @click="launchScript()">lancer ce script</button>
     <p v-if="requestStore.javascriptRequestLaunched">
-      Bravo 🎉, vous avez exécuté votre première requette sur le serveur de APIPOST ✅.
+      Bravo 🎉, vous avez exécuté votre première requête sur le serveur de APIPOST ✅.
     </p>
     <span v-if="requestStore.javascriptRequestLaunched">
       <button class="goToGuide" v-on:click="goToGuides">
