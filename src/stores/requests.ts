@@ -13,7 +13,7 @@ export const useRequestStore: any = defineStore('requestStore', {
   getters: {
     async getJavascriptData() {
       await axios
-        .get('https://apipostserver.onrender.com/product/9')
+        .get(`${import.meta.env.VITE_BASE_URL}/product/9`)
         .then(async (response: any) => {
           this.javascriptData = await response.data
         })
@@ -21,7 +21,7 @@ export const useRequestStore: any = defineStore('requestStore', {
     },
     async getPythonData() {
       await axios
-        .get('https://apipostserver.onrender.com/product/9')
+        .get(`${import.meta.env.VITE_BASE_URL}/product/9`)
         .then(async (response: any) => {
           this.pythonData = await response.data
         })
