@@ -12,19 +12,15 @@ export const useRequestStore: any = defineStore('requestStore', {
   },
   getters: {
     async getJavascriptData() {
-      await axios
-        .get(`${import.meta.env.VITE_BASE_URL}/product/9`)
-        .then(async (response: any) => {
-          this.javascriptData = await response.data
-        })
+      await axios.get(`${import.meta.env.VITE_BASE_URL}/product/9`).then(async (response: any) => {
+        this.javascriptData = await response.data
+      })
       this.javascriptRequestLaunched = true
     },
     async getPythonData() {
-      await axios
-        .get(`${import.meta.env.VITE_BASE_URL}/product/9`)
-        .then(async (response: any) => {
-          this.pythonData = await response.data
-        })
+      await axios.get(`${import.meta.env.VITE_BASE_URL}/product/9`).then(async (response: any) => {
+        this.pythonData = await response.data
+      })
       this.pythonRequestLaunched = true
     }
   }
