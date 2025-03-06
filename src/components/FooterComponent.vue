@@ -32,6 +32,7 @@
               name="visitor_email"
               id="visitor_email"
               placeholder="Votre email"
+              v-model="emailToSend.sender.name"
             />
             <img src="../assets/images/enveloppe.png" alt="" />
           </div>
@@ -40,8 +41,9 @@
             name="visitor_message"
             id="visitor_message"
             placeholder="Votre message"
+            v-model="emailToSend.htmlContent"
           ></textarea>
-          <button>envoyer</button>
+          <button @click="sendDataToServer">envoyer</button>
         </form>
       </div>
       <div class="copyrighting">
@@ -53,6 +55,47 @@
     </footer>
   </div>
 </template>
+<script lang="ts">
+import axios from 'axios'
+
+export default {
+  name: 'FooterComponent',
+  data() {
+    return {
+      emailToSend: {
+        name: 'Email from APIPOST platform',
+        subject: 'User email from APIPOST platform',
+        sender: {
+          name: '',
+          email: 'franciscoialy43@gmail.com'
+        },
+        to: [
+          {
+            name: 'IALY Francisco Raymond',
+            email: 'ialyfrancisco7@gmail.com'
+          }
+        ],
+        htmlContent: ''
+      }
+    }
+  },
+  methods: {
+    async sendDataToServer() {
+      await axios({
+        method: 'POST',
+        url: `${import.meta.env.VITE_APP_SERVER_DOMAIN}/email/send`,
+        data: this.emailToSend
+      })
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    }
+  }
+}
+</script>
 <style scoped>
 div.bg_image {
   width: 100%;
