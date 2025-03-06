@@ -67,7 +67,7 @@ export default {
         subject: 'User email from APIPOST platform',
         sender: {
           name: '',
-          email: 'apipost@gmail.com'
+          email: 'franciscoialy43@gmail.com'
         },
         to: [
           {
