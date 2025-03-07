@@ -32,7 +32,7 @@
               name="visitor_email"
               id="visitor_email"
               placeholder="Votre email"
-              v-model="emailToSend.sender.name"
+              v-model="emailUserSender"
             />
             <img src="../assets/images/enveloppe.png" alt="" />
           </div>
@@ -41,7 +41,7 @@
             name="visitor_message"
             id="visitor_message"
             placeholder="Votre message"
-            v-model="emailToSend.htmlContent"
+            v-model="textToSend"
           ></textarea>
           <button @click="sendDataToServer">envoyer</button>
         </form>
@@ -62,11 +62,62 @@ export default {
   name: 'FooterComponent',
   data() {
     return {
-      emailToSend: {
+      emailUserSender: "",
+      textToSend: "",
+      
+    }
+  },
+  methods: {
+    async sendDataToServer() {
+
+      let formatTemplateHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body style="width: 100%; display: flex; justify-content: center;">
+    <section style="width: 100%; max-width: 700px; margin: 50px auto 50px auto;">
+        <header style="background-image: url('https://apipost-4jyv.onrender.com/assets/background_image%20(3)-Dk_cZ68r.jpg'); width: 100%; height: 50px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-position: center; background-repeat: no-repeat; background-size: cover;">
+        </header>
+        <main style="padding-left: 30px;">
+            <a href="https://apipost-4jyv.onrender.com/" target="_blank" style="text-decoration: none;">
+                <header style="padding-top: 30px; display: flex; align-items: center;">
+                    <img style="width: 50px;" src="https://apipost-4jyv.onrender.com/assets/logo_apipost-DpmZ7gMa.png" alt="Logo de apipost">
+                    <p class="poppins-regular" style="margin-left: 10px; color: #333; display: flex; align-items: center;">APIPOST</p>
+                </header>
+            </a>
+            <main style=" color: #333;">
+                <h3 class="poppins-regular" style="">Email user sender: ${this.emailUserSender}</h3>
+                <p class="poppins-regular" style="font-size: 14px;">${this.textToSend}</p>
+            </main>
+            <footer>
+                <p class="poppins-regular" style="font-size: 12px; margin-top: 20px;">Email sent from <a href="https://apipost-4jyv.onrender.com/" target="_blank" style="color: crimson; text-decoration: none;">APIPOST</a> platform</p>
+            </footer>
+        </main>
+        <footer style="background-image: url('https://apipost-4jyv.onrender.com/assets/background_image%20(3)-Dk_cZ68r.jpg'); width: 100%; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; background-position: center; background-repeat: no-repeat; background-size: cover; margin-top: 50px;">
+
+        </footer>
+    </section>
+</body>
+</html>`
+
+      var EMAIL = {
         name: 'Email from APIPOST platform',
         subject: 'User email from APIPOST platform',
         sender: {
-          name: '',
+          name: this.emailUserSender,
           email: 'franciscoialy43@gmail.com'
         },
         to: [
@@ -75,16 +126,13 @@ export default {
             email: 'ialyfrancisco7@gmail.com'
           }
         ],
-        htmlContent: ''
+        htmlContent: formatTemplateHtml 
       }
-    }
-  },
-  methods: {
-    async sendDataToServer() {
+
       await axios({
         method: 'POST',
         url: `${import.meta.env.VITE_APP_SERVER_DOMAIN}/email/send`,
-        data: this.emailToSend
+        data: EMAIL
       })
         .then((response) => {
           console.log(response)
